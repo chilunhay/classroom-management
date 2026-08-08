@@ -1,0 +1,119 @@
+.setup-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.setup-card {
+  width: 100%;
+  max-width: 480px;
+
+  background: #ffffff;
+  border: 1px solid #e1e5ea;
+  border-radius: 10px;
+
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.setup-card h1 {
+  margin: 0 0 10px;
+
+  text-align: center;
+
+  font-size: 28px;
+  font-weight: 600;
+
+  color: #111827;
+}
+
+.setup-subtitle {
+  margin: 0 0 30px;
+
+  text-align: center;
+
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #334155;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+
+  padding: 13px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  font-size: 15px;
+
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #1677ff;
+}
+
+.setup-card button {
+  width: 100%;
+
+  padding: 13px;
+  margin-top: 5px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #1677ff;
+  color: #ffffff;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.setup-card button:hover {
+  background: #0969e8;
+}
+
+.setup-card button:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.setup-error {
+  margin: 0 0 15px;
+
+  text-align: center;
+
+  color: #ef4444;
+  font-size: 14px;
+}
+
+.setup-success {
+  margin: 0 0 15px;
+
+  text-align: center;
+
+  color: #16a34a;
+  font-size: 14px;
+}

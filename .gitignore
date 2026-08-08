@@ -1,0 +1,28 @@
+# Dependencies
+client/node_modules/
+server/node_modules/
+
+# Environment variables
+client/.env
+client/.env.*
+server/.env
+server/.env.*
+
+# Allow example env files
+!client/.env.example
+!server/.env.example
+
+# Build
+client/dist/
+client/build/
+
+# Logs
+*.log
+
+# Firebase credentials
+server/serviceAccountKey.json
+server/firebase-adminsdk-*.json
+
+# OS
+.DS_Store
+Thumbs.db

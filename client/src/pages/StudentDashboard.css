@@ -1,0 +1,656 @@
+.student-layout {
+  min-height: 100vh;
+  display: flex;
+  background-color: #f7f8fa;
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+
+.student-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e5e7eb;
+  background-color: #ffffff;
+}
+
+.student-sidebar-logo {
+  padding: 28px 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.student-sidebar-logo h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.student-sidebar-logo p {
+  margin: 4px 0 0;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.student-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.student-sidebar-menu button {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 28px;
+  border: none;
+  border-right: 3px solid transparent;
+  background: transparent;
+  color: #5f6673;
+  font-size: 15px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.student-sidebar-menu button:hover {
+  background-color: #f5f8ff;
+  color: #1677ff;
+}
+
+.student-sidebar-menu button.active {
+  border-right-color: #1677ff;
+  background-color: #eaf3ff;
+  color: #1677ff;
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  flex-shrink: 0;
+}
+
+.student-logout {
+  width: calc(100% - 40px);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: auto 20px 24px;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  background-color: #fff5f5;
+  color: #ef4444;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.student-logout svg {
+  width: 19px;
+  height: 19px;
+}
+
+.student-logout:hover {
+  border-color: #ef4444;
+  background-color: #ef4444;
+  color: white;
+}
+
+/* Main */
+
+.student-main {
+  width: calc(100% - 220px);
+  min-height: 100vh;
+  margin-left: 220px;
+}
+
+.student-header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36px;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #ffffff;
+}
+
+.student-header h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.student-header p {
+  margin: 4px 0 0;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.student-avatar,
+.profile-avatar,
+.chat-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  color: #6b7280;
+}
+
+.student-avatar {
+  width: 44px;
+  height: 44px;
+  font-size: 22px;
+}
+
+.student-avatar svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Content */
+
+.student-content {
+  margin: 32px;
+  padding: 28px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.student-title {
+  margin-bottom: 28px;
+}
+
+.student-title h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.student-title p {
+  margin: 7px 0 0;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+/* Lessons */
+
+.student-lesson-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.student-lesson-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+.student-lesson-card:hover {
+  border-color: #d7e8ff;
+  background-color: #fafcff;
+}
+
+.lesson-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background-color: #eaf3ff;
+  color: #1677ff;
+  font-size: 20px;
+}
+
+.lesson-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.lesson-content h3 {
+  margin: 0 0 7px;
+  color: #374151;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.lesson-content p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.lesson-action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.student-status {
+  min-width: 88px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 11px;
+}
+
+.student-status.completed {
+  background-color: #dcfce7;
+  color: #22c55e;
+}
+
+.student-status.pending {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.done-button {
+  padding: 8px 13px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1677ff;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.done-button:hover {
+  background-color: #0958d9;
+}
+
+.empty-lessons {
+  padding: 70px 20px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.empty-lessons svg {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 8px;
+}
+
+.empty-lessons p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* Profile */
+
+.profile-card {
+  max-width: 720px;
+  padding: 26px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.profile-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.profile-avatar {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  font-size: 25px;
+}
+
+.profile-heading h3 {
+  margin: 0;
+  color: #374151;
+  font-size: 17px;
+}
+
+.profile-heading p {
+  margin: 5px 0 0;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.profile-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.profile-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.profile-form input {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  outline: none;
+  color: #374151;
+  font-size: 13px;
+}
+
+.profile-form input:focus {
+  border-color: #1677ff;
+}
+
+.profile-form input:disabled {
+  background-color: #f5f5f5;
+  color: #9ca3af;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+
+.profile-actions button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1677ff;
+  color: white;
+  cursor: pointer;
+}
+
+.profile-actions button:hover {
+  background-color: #0958d9;
+}
+
+/* Messages */
+
+.student-message-layout {
+  height: calc(100vh - 144px);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  margin: 32px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.instructor-list {
+  border-right: 1px solid #e5e7eb;
+  background-color: white;
+}
+
+.instructor-list h3 {
+  margin: 0;
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 16px;
+}
+
+.instructor-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  background-color: white;
+}
+
+.instructor-item.active {
+  background-color: #eef6ff;
+}
+
+.chat-avatar {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+.instructor-item strong,
+.student-chat-header strong {
+  display: block;
+  color: #374151;
+  font-size: 13px;
+}
+
+.instructor-item span,
+.student-chat-header span {
+  display: block;
+  margin-top: 4px;
+  color: #9ca3af;
+  font-size: 11px;
+}
+
+.student-chat-panel {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+}
+
+.student-chat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: white;
+}
+
+.student-chat-messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.student-message {
+  max-width: 65%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.student-message.sent {
+  align-self: flex-end;
+  background-color: #1677ff;
+  color: white;
+}
+
+.student-message.received {
+  align-self: flex-start;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  color: #374151;
+}
+
+.no-messages {
+  margin: auto;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.student-chat-input {
+  display: flex;
+  padding: 14px;
+  border-top: 1px solid #e5e7eb;
+  background-color: white;
+}
+
+.student-chat-input input {
+  flex: 1;
+  min-width: 0;
+  padding: 11px 13px;
+  border: 1px solid #d1d5db;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.student-chat-input input:focus {
+  border-color: #1677ff;
+}
+
+.student-chat-input button {
+  padding: 0 20px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #1677ff;
+  color: white;
+  cursor: pointer;
+}
+
+.student-chat-input button:hover {
+  background-color: #0958d9;
+}
+
+/* Error */
+
+.student-error {
+  margin: 20px 32px 0;
+  padding: 10px 14px;
+  border: 1px solid #fecaca;
+  border-radius: 4px;
+  background-color: #fef2f2;
+  color: #dc2626;
+  font-size: 13px;
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+  .student-sidebar {
+    width: 180px;
+  }
+
+  .student-main {
+    width: calc(100% - 180px);
+    margin-left: 180px;
+  }
+
+  .student-sidebar-menu button {
+    padding: 0 20px;
+  }
+
+  .student-lesson-card {
+    align-items: flex-start;
+  }
+
+  .lesson-action {
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  .student-message-layout {
+    grid-template-columns: 220px 1fr;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .student-layout {
+    display: block;
+  }
+
+  .student-sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .student-sidebar-logo {
+    padding: 18px 20px;
+  }
+
+  .student-sidebar-menu {
+    flex-direction: row;
+    margin: 0;
+    overflow-x: auto;
+  }
+
+  .student-sidebar-menu button {
+    flex: 1;
+    min-width: 120px;
+    justify-content: center;
+    padding: 0 12px;
+    border-right: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .student-sidebar-menu button.active {
+    border-right: none;
+    border-bottom-color: #1677ff;
+  }
+
+  .student-logout {
+    display: none;
+  }
+
+  .student-main {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .student-header {
+    padding: 0 20px;
+  }
+
+  .student-content {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .student-lesson-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .lesson-action {
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .profile-form {
+    grid-template-columns: 1fr;
+  }
+
+  .student-message-layout {
+    height: auto;
+    grid-template-columns: 1fr;
+    margin: 20px;
+  }
+
+  .instructor-list {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .student-chat-panel {
+    min-height: 450px;
+  }
+}
