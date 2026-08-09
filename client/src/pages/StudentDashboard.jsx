@@ -47,12 +47,18 @@ function StudentDashboard() {
 
         localStorage.setItem("student", JSON.stringify(latestStudent));
       } catch (error) {
+        if (error.response?.status === 404) {
+          localStorage.removeItem("student");
+          navigate("/");
+          return;
+        }
+
         console.error("Failed to fetch student profile:", error);
       }
     };
 
     fetchStudentProfile();
-  }, []);
+  }, [navigate]);
 
   useEffect(() => {
     if (!student) {

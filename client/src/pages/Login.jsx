@@ -157,7 +157,13 @@ function Login() {
 
             <p className="login-subtitle">Sign in with your username and password</p>
 
-            <div className="login-form">
+            <form
+              className="login-form"
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleUsernameLogin();
+              }}
+            >
               <label>Username</label>
 
               <input
@@ -165,6 +171,7 @@ function Login() {
                 placeholder="Enter username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
+                autoComplete="username"
               />
 
               <label>Password</label>
@@ -174,12 +181,13 @@ function Login() {
                 placeholder="Enter password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                autoComplete="current-password"
               />
 
-              <button className="login-button" onClick={handleUsernameLogin} disabled={loading}>
+              <button type="submit" className="login-button" disabled={loading}>
                 {loading ? "Signing in..." : "Sign In"}
               </button>
-            </div>
+            </form>
 
             <div className="login-divider">
               <span>or</span>
@@ -219,16 +227,23 @@ function Login() {
               {loginType === "phone" ? "Please enter your phone to sign in" : "Please enter your email to sign in"}
             </p>
 
-            <input
-              type={loginType === "email" ? "email" : "text"}
-              placeholder={loginType === "email" ? "Your Email Address" : "Your Phone Number"}
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-            />
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleSendCode();
+              }}
+            >
+              <input
+                type={loginType === "email" ? "email" : "text"}
+                placeholder={loginType === "email" ? "Your Email Address" : "Your Phone Number"}
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+              />
 
-            <button className="login-button" onClick={handleSendCode} disabled={loading}>
-              {loading ? "Sending..." : "Next"}
-            </button>
+              <button type="submit" className="login-button" disabled={loading}>
+                {loading ? "Sending..." : "Next"}
+              </button>
+            </form>
           </>
         )}
 
@@ -251,18 +266,25 @@ function Login() {
               Please enter the code sent to your {loginType === "phone" ? "phone" : "email"}
             </p>
 
-            <input
-              type="text"
-              inputMode="numeric"
-              maxLength={6}
-              placeholder="Enter your code"
-              value={accessCode}
-              onChange={(e) => setAccessCode(e.target.value)}
-            />
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleVerifyCode();
+              }}
+            >
+              <input
+                type="text"
+                inputMode="numeric"
+                maxLength={6}
+                placeholder="Enter your code"
+                value={accessCode}
+                onChange={(e) => setAccessCode(e.target.value)}
+              />
 
-            <button className="login-button" onClick={handleVerifyCode} disabled={loading}>
-              {loading ? "Verifying..." : "Submit"}
-            </button>
+              <button type="submit" className="login-button" disabled={loading}>
+                {loading ? "Verifying..." : "Submit"}
+              </button>
+            </form>
 
             <p className="resend-text">
               Code not received? <button onClick={handleSendCode}>Send again</button>

@@ -120,6 +120,19 @@ cd client
 npm run dev
 ```
 
+## Known Limitations
+
+### SMS OTP
+
+Twilio SMS delivery is currently unavailable in the development environment.
+
+For testing purposes, when `NODE_ENV` is not `production`, the generated access code
+is displayed in the server console:
+
+DEV ACCESS CODE: 123456
+
+In production, if SMS delivery fails, the access code is deleted and the API returns an error.
+
 ## Project Structure
 
 - `client/` - React frontend
