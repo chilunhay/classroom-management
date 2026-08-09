@@ -103,6 +103,9 @@ Required variables:
 - `TWILIO_ACCOUNT_SID`
 - `TWILIO_AUTH_TOKEN`
 - `TWILIO_PHONE_NUMBER`
+- Firebase:
+Place your Firebase Admin SDK service account file
+at server/serviceAccountKey.json.
 
 ### 4. Run the application
 
