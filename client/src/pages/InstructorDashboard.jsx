@@ -249,7 +249,7 @@ function InstructorDashboard() {
 
   const handleLogout = () => {
     localStorage.removeItem("instructor");
-    navigate("/");
+    navigate("/login", { replace: true });
   };
 
   const filteredStudents = students.filter((student) =>

@@ -55,7 +55,7 @@ const SetupAccount = () => {
       setSuccess(response.data.message);
 
       setTimeout(() => {
-        navigate("/");
+        navigate("/login");
       }, 1500);
     } catch (error) {
       setError(error.response?.data?.error || "Failed to setup account");

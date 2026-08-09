@@ -189,7 +189,7 @@ function StudentDashboard() {
 
   const handleLogout = () => {
     localStorage.removeItem("student");
-    navigate("/");
+    navigate("/login", { replace: true });
   };
 
   return (
